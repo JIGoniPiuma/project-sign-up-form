@@ -3,9 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Wasabi Softwares</title>
+    <link rel="icon" type="image/png" href="images/wasabi-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <link rel="stylesheet" href="style.css" />
+    <div class="container-brand">
+      <img
+        class="wasabi"
+        src="images/wasabi.jpeg"
+        alt="Wasabi image with waves backgroung"
+      />
+      <div class="brand-name-container">
+        <div class="brand-name">WASABI SOFTWARES</div>
+      </div>
+    </div>
+
+    <div class="container-content">
+      <div class="header-container">
+        <div class="header-text">
+          Better tools, simpler businesses.
+          <br />
+          Sign up <em>now</em> to get started
+        </div>
+      </div>
+      <h2>Lets do this!</h2>
+      <form action="#" method="get">
+        <fieldset class="name-information">
+          <div class="fields">
+            <label for="first_name">FIRST NAME:</label>
+            <input
+              type="text"
+              name="first_name"
+              id="first_name"
+              required
+              placeholder="Enter your first name"
+              title="First name can only contain letters, spaces, or hyphens"
+              oninput="this.setCustomValidity(this.value.match(/^[A-Za-zÀ-ÿÁ-Ýá-ý]+([ -][A-Za-zÀ-ÿÁ-Ýá-ý]+)*$/) ? '' : 'First name must contain only letters, spaces, or hyphens')"
+            />
+          </div>
+          <div class="fields">
+            <label for="last_name">LAST NAME:</label>
+            <input
+              type="text"
+              name="last_name"
+              id="last_name"
+              required
+              placeholder="Enter your last name"
+              title="Last name can only contain letters, spaces, or hyphens"
+              oninput="this.setCustomValidity(this.value.match(/^[A-Za-zÀ-ÿÁ-Ýá-ý]+([ -][A-Za-zÀ-ÿÁ-Ýá-ý]+)*$/) ? '' : 'Last name must contain only letters, spaces, or hyphens')"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="user-contact">
+          <div class="fields">
+            <label for="user_email">EMAIL:</label>
+            <input
+              type="email"
+              name="user_email"
+              required
+              id="user_email"
+              placeholder="youremail@example.com"
+            />
+          </div>
+          <div class="fields">
+            <label for="user_phone">PHONE NUMBER:</label>
+            <input
+              type="tel"
+              name="user_phone"
+              required
+              id="user_phone"
+              placeholder="+ 54 911 61120089"
+              title="Phone number must be in a valid format (e.g. +1 800-555-1234, (800) 555-1234, 800 555 1234)"
+              oninput="this.setCustomValidity(this.value.match(/^\+?[0-9()\s]*$/) ? '' : 'Phone number can only contain numbers, spaces, parentheses, or +')"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="user-password">
+          <div class="fields">
+            <label for="user_password">PASSWORD:</label>
+            <input
+              type="password"
+              name="user_password"
+              id="user_password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
+              minlength="8"
+              maxlength="20"
+              required
+              placeholder="Enter your password"
+              title="Password must be 8-20 characters long and contain at least one lowercase letter, one uppercase letter, one digit, and one special character."
+            />
+          </div>
+          <div class="fields">
+            <label for="user_password_confirmation">CONFIRM PASSWORD:</label>
+            <input
+              type="password"
+              name="user_password_confirmation"
+              id="user_password_confirmation"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
+              minlength="8"
+              maxlength="20"
+              required
+              placeholder="Confirm your password"
+              title="Please confirm your passwoerd"
+            />
+          </div>
+        </fieldset>
+
+        <button class="create" type="submit">Create Account</button>
+      </form>
+    </div>
   </body>
 </html>
